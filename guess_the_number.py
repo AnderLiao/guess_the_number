@@ -5,7 +5,9 @@
 # - Don't stop until the use guess the right one
 
 import random
-roll = random.randint(1,100)
+num_a = int(input('Choose the smallest number: '))
+num_b = int(input('Choose the greatest number: '))
+roll = random.randint(num_a , num_b)
 i = 1
 while True:
 	print('This is your No. ' + str(i) + ' time(s)')
