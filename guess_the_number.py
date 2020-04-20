@@ -5,15 +5,17 @@
 # - Don't stop until the use guess the right one
 
 import random
-
 roll = random.randint(1,100)
-
+i = 1
 while True:
+	print('This is your No. ' + str(i) + ' time(s)')
 	user_input = int(input('Guess a number between 1 to 100: '))
+	i += 1
 	if user_input > roll:
 		print('Lower, try again!')
 	elif user_input < roll:
 		print('Higher, try again!')
 	else:
-		print('Bingo!')
+		i -= 1
+		print('Bingo! You made it after ' + str(i) + ' time(s)')
 		break
